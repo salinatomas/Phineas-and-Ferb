@@ -1,0 +1,461 @@
+:root {
+  --color-white: #ffffff;
+  --color-oscuro: #000000;
+  --color-piel:  #fcbba3;
+  --color-pupila: #D1D1E0;
+  --color-azul: #202275;
+}
+
+body {
+  margin: 0;
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.personajes {
+  width: 520px;
+  display: flex;
+  height: max-content;
+  box-shadow: 0 10px 20px -5px rgba(145,148,161,0.4);
+  border-radius: 20px;
+  margin-top: 100px;
+}
+
+
+.ferb_cabeza {
+  width: 300px;
+  height: 400px;
+  position: relative;
+}
+.ferb_cabeza .cara {
+  position: absolute;
+  top: 70px;
+  left: 60px;
+  width: 140px;
+  height: 300px;
+  background: var(--color-piel);
+  clip-path: polygon(0 0, 10% 60%, 20% 100%, 50% 100%, 70% 60%, 60% 0);
+  border-radius: 20px 55% 0 0;
+  z-index: 1;
+}
+.ferb_cabeza .cara-contorno {
+  position: absolute;
+  top: 68px;
+  left: 57px;
+  width: 148px;
+  height: 304px;
+  background: var(--color-oscuro);
+  clip-path: polygon(0 0, 10% 60%, 20% 100%, 50% 100%, 70% 60%, 60% 0);
+  border-radius: 20px 55% 0 0;
+}
+.pelo {
+  position: absolute;
+  width: 10px;
+  border-left: 1px solid var(--color-oscuro);
+  border-radius: 40%;
+  z-index: 0;
+}
+.ferb_cabeza .pelo:first-child {
+  border-width: 2px;
+  top: 75px;
+  left: 50px;
+  transform: rotate(110deg);
+  height: 30px;
+  z-index: 10;
+}
+.ferb_cabeza .pelo:nth-child(2) {
+  height: 40px;
+  top: 45px;
+  left: 70px;
+  transform: rotate(160deg);
+  border-width: 2px;
+  z-index: 10;
+}
+.ferb_cabeza .pelo:nth-child(3) {
+  border-width: 2px;
+  top: 25px;
+  left: 125px;
+  transform: rotate(30deg);
+  height: 65px;
+  z-index: 10;
+}
+.ferb_cabeza .pelo:last-child {
+  border-width: 2px;
+  top: 55px;
+  left: 140px;
+  transform: rotate(35deg);
+  height: 35px;
+  z-index: 10;
+}
+.ferb_cabeza .nariz .parte_uno {
+  width: 30px;
+  height: 55px;
+  border: 2px solid var(--color-oscuro);
+  background: var(--color-piel);
+  border-radius: 0 0 8px;
+  z-index: 4;
+
+  position: absolute;
+  top: 235px;
+  left: 149px;
+  border-top: none;
+  border-left: none;
+}
+.ferb_cabeza .nariz .parte_dos {
+  background: var(--color-piel);
+  width: 50px;
+  height: 15px;
+  border-top: 2px solid black;
+  z-index: 3;
+
+  position: absolute;
+  top: 230px;
+  left: 130px;
+  transform: rotate(10deg);
+}
+.ferb_cabeza .ojo {
+  position: absolute;
+  background: white;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+.ferb_cabeza .ojo_interno {
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-azul);
+  border-radius: 50%;
+  position: relative;
+}
+.ferb_cabeza .ojo_interno .pupila {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-pupila);
+  border-radius: 50%;
+}
+.ferb_cabeza .ojo:first-child {
+  width: 65px;
+  height: 80px;
+  z-index: 10;
+  top: 160px;
+  left: 78px;
+}
+.ferb_cabeza .ojo:first-child .ojo_interno {
+  top: 40px;
+  left: 32px;
+}
+.ferb_cabeza .ojo:first-child .ojo_interno .pupila {
+  top: 5px;
+  left: 13px;
+}
+.ferb_cabeza .ojo:last-child {
+  width: 75px;
+  height: 100px;
+  z-index: 2;
+  top: 140px;
+  left: 110px;
+}
+.ferb_cabeza .ojo:last-child .ojo_interno {
+  top: 48px;
+  left: 45px;
+}
+.ferb_cabeza .ojo:last-child .ojo_interno .pupila {
+  top: 5px;
+  left: 13px;
+}
+.ferb_cabeza .pestana {
+  position: absolute;
+  width: 10px;
+  height: 25px;
+  border-left: 3px solid var(--color-oscuro);
+  border-radius: 50%;
+}
+.ferb_cabeza .pestana.uno {
+  top: 153px;
+  left: 75px;
+  transform: rotate(-40deg);
+  z-index: 9;
+  height: 30px;
+}
+.ferb_cabeza .pestana.dos {
+  top: 148px;
+  left: 90px;
+  transform: rotate(-30deg);
+  z-index: 9;
+  height: 30px;
+}
+.ferb_cabeza .pestana.tres {
+  top: 130px;
+  left: 168px;
+  transform: rotate(200deg);
+}
+.ferb_cabeza .pestana.cuatro {
+  top: 138px;
+  left: 178px;
+transform: rotate(220deg);
+}
+.oreja {
+  position: relative;
+  width: 38px;
+  height: 40px;
+  border: 2px solid black;
+  border-left: 5px solid transparent;
+  border-radius: 50%;
+  z-index: 10;
+  background: var(--color-piel);
+}
+.ferb_cabeza .oreja {
+  transform: rotate(165deg);
+  top: 235px;
+  left: 50px;
+}
+.oreja_interna {
+  position: relative;
+  margin: 0;
+  border: 2px solid black;
+  transform: rotate(25deg);
+}
+.oreja_interna.uno {
+  top: 10px;
+  left: 11px;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-radius: 50%;
+  width: 10px;
+  height: 8px;
+  
+}
+.oreja_interna.dos {
+  width: 10px;
+  height: 10px;
+  top: 3px;
+  left: 8px;
+  border-radius: 50%;
+  border-left: 5px solid transparent;
+}
+.ferb_cabeza .boca .parte_uno {
+  background: var(--color-piel);
+  width: 25px;
+  height: 5px;
+  border-bottom: 2px solid var(--color-oscuro);
+  border-right: 2px solid var(--color-oscuro);
+
+  border-radius: 50%;
+
+  position: absolute;
+  top: 317px;
+  left: 128px;
+  z-index: 11;
+  transform: rotate(10deg);
+}
+.ferb_cabeza .boca .parte_dos {
+  background: var(--color-piel);
+  width: 15px;
+  height: 7px;
+  border-top: 2px solid var(--color-oscuro);
+  border-radius: 0 0 50% 50%;
+
+  position: absolute;
+  top: 315px;
+  left: 139px;
+  z-index: 10;
+  transform: rotate(50deg);
+}
+
+
+
+.phineas_cabeza {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  left: -80px;
+  top: 150px;
+}
+/* .phineas_cabeza {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  border-right: 125px solid transparent;
+  border-left: 130px solid transparent;
+  border-top: 160px solid #fcbba3;
+  transform: rotate(-5deg);
+} */
+.phineas_cabeza .cara {
+  height: 140px;
+  width: 230px;
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  background: var(--color-piel);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  transform: rotate(-2deg);
+  z-index: 2;
+}
+.phineas_cabeza .cara-contorno {
+  position: absolute;
+  top: 78px;
+  left: 17px;
+  width: 236px;
+  height: 145px;
+  background: var(--color-oscuro);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  transform: rotate(-2deg);
+  z-index: 1;
+}
+.phineas_cabeza .pelo:first-child {
+  top: 65px;
+  left: 225px;
+  transform: rotate(150deg);
+  height: 15px;
+}
+.phineas_cabeza .pelo:nth-child(2) {
+  top: 48px;
+  left: 235px;
+  transform: rotate(180deg);
+  height: 35px;
+}
+.phineas_cabeza .pelo:nth-child(3) {
+  top: 73px;
+  left: 250px;
+  height: 30px;
+  transform: rotate(115deg);
+}
+.phineas_cabeza .pelo:last-child {
+  top: 85px;
+  left: 235px;
+  height: 20px;
+  transform: rotate(125deg);
+}
+.ojos {
+  
+}
+.phineas_cabeza .ojo {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: white;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+.phineas_cabeza .ojo.uno {
+  top: 35px;
+  left: 68px;
+  z-index: 0;
+}
+.phineas_cabeza .ojo.dos {
+  left: 110px;
+  top: 30px;
+  z-index: 10;
+}
+.phineas_cabeza .ojo_interno {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-azul);
+  border-radius: 50%;
+  position: relative;
+}
+.phineas_cabeza .ojo.uno .ojo_interno {
+  top: 12px;
+}
+.phineas_cabeza .ojo.dos .ojo_interno {
+  top: 20px;
+}
+.phineas_cabeza .ojo_interno .pupila {
+  position: relative;
+  top: 7px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-pupila);
+  border-radius: 50%;
+}
+.phineas_cabeza .pestana {
+  position: absolute;
+  width: 10px;
+  height: 25px;
+  border-left: 2px solid var(--color-oscuro);
+  border-radius: 40%;
+  z-index: 0;
+}
+.phineas_cabeza .pestana.uno {
+  border-width: 3px;
+  top: 15px;
+  left: 110px;
+  transform: rotate(20deg);
+}
+.phineas_cabeza .pestana.dos {
+  height: 22px;
+  top: 18px;
+  left: 120px;
+  transform: rotate(25deg);
+}
+.phineas_cabeza .pestana.tres {
+  border-width: 3px;
+  height: 30px;
+  top: 10px;
+  left: 160px;
+  transform: rotate(25deg);
+  border-radius: 50%;
+}
+.phineas_cabeza .pestana.cuatro {
+  top: 14px;
+  left: 173px;
+  transform: rotate(40deg);
+}
+.phineas_cabeza .oreja {
+  transform: rotate(30deg);
+  top: 120px;
+  left: 168px;
+}
+.phineas_cabeza .boca {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: transparent;
+  top: 158px;
+  left: 93px;
+  z-index: 10;
+}
+.phineas_cabeza .boca .parte_uno {
+  position: absolute;
+  width: 15px;
+  height: 5px;
+  border: 2px solid black;
+  border-radius: 50%;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transform: rotate(15deg);
+}
+.phineas_cabeza .boca .parte_dos {
+  background: #6E3839;
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 0 50% 50% 30%;
+}
+.phineas_cabeza .mejilla {
+  background: var(--color-piel);
+  width: 10px;
+  height: 18px;
+  border: 2px solid black;
+  border-radius: 50%;
+  border-top: 1px solid transparent;
+  border-right: 2px solid transparent;
+  transform: rotate(-20deg);
+  position: absolute;
+  top: 170px;
+  left: 98px;
+  z-index: 1;
+}
+
+
+
+
+
