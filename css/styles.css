@@ -1,17 +1,28 @@
 :root {
   --color-white: #ffffff;
   --color-oscuro: #000000;
+  --color-bg: #6f4a8e;
   --color-piel:  #fcbba3;
   --color-pupila: #D1D1E0;
   --color-azul: #202275;
 }
 
 body {
+  width: 100%;
   margin: 0;
-  position: static;
+
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: var(--color-bg);
+  font-family: 'Roboto', sans-serif;
+}
+
+.header_title {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 3em;
 }
 
 .personajes {
@@ -20,7 +31,8 @@ body {
   height: max-content;
   box-shadow: 0 10px 20px -5px rgba(145,148,161,0.4);
   border-radius: 20px;
-  margin-top: 100px;
+  background: var(--color-white);
+  padding: 0 0 2em;
 }
 
 
@@ -253,7 +265,7 @@ transform: rotate(220deg);
 .ferb_cabeza .boca .parte_dos {
   background: var(--color-piel);
   width: 15px;
-  height: 7px;
+  height: 6px;
   border-top: 2px solid var(--color-oscuro);
   border-radius: 0 0 50% 50%;
 
@@ -261,14 +273,15 @@ transform: rotate(220deg);
   top: 315px;
   left: 139px;
   z-index: 10;
-  transform: rotate(50deg);
+  transform: rotate(45deg);
+
 }
 
 
 
 .phineas_cabeza {
-  width: 300px;
-  height: 500px;
+  width: 200px;
+  height: 200px;
   position: relative;
   left: -80px;
   top: 150px;
@@ -455,7 +468,12 @@ transform: rotate(220deg);
   z-index: 1;
 }
 
-
-
-
-
+@media screen and (max-width: 640px) {
+  .personajes {
+    transform: scale(.6);
+    margin-top: 0;
+  }
+  .header_title {
+    font-size: 2em;
+  }
+}
